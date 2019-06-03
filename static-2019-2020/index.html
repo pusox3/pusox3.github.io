@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
   <!-- ICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon/favicon-32x32.png">
@@ -25,34 +29,78 @@
 <body>
   <!-- HEADER -->
   <header class="site-header" role="banner">
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
 
-    <!-- NAVBAR 
-    <div class="navbar-wrapper">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="Bootstrap to Wordpress"></a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="resources.html">Resources</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
+      <!-- Logo -->
+      <div class="mx-auto my-2 order-lg-1 d-flex flex-column">
+        <a class="mx-auto" href="#">
+          <img src="assets/img/logo_xtra_small.jpg" class="rounded-circle">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Left links -->
+      <div class="navbar-collapse collapse w-50 dual-nav order-lg-0">
+        <ul class="nav navbar-nav ml-auto text-center nav-fill w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dance Teams</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Cultural</a>
+              <a class="dropdown-item" href="#">Ballroom</a>
+              <a class="dropdown-item" href="#">Modern</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right links -->
+      <div class="navbar-collapse collapse w-50 dual-nav order-lg-2">
+        <ul class="nav navbar-nav mr-auto text-center nav-fill w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Executive Board</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Alumni</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header Video -->
+    <div class="video">
+      <div class="overlay"></div>
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+      </video>
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-3">PUSO</h1>
+            <p class="lead mb-0">Philippine United Student Organization</p>
           </div>
         </div>
       </div>
-    </div> -->
-
+    </div>
 
   </header>
+
+  <section class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <p>Some random ass text</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
