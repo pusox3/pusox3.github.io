@@ -8,7 +8,7 @@
 .video{
   position: relative;
   background-color: black;
-  height: 80vh;
+  height: 90vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -63,36 +63,67 @@ header .overlay {
   }
 }
 
-    .strike {
-        display: block;
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap; 
-        padding-bottom: 10px;
-    }
+.strike {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap; 
+  padding-bottom: 10px;
+}
 
-    .strike > span {
-        position: relative;
-        display: inline-block;
-        font-size:1.75rem;
-    }
+.strike > span {
+  position: relative;
+  display: inline-block;
+  font-size:1.75rem;
+}
 	
-    .strike > span:before,
-    .strike > span:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 9999px;
-        height: 1px;
-        background: black;
-    }
+.strike > span:before,
+.strike > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: black;
+}
 
-    .strike > span:before {
-        right: 100%;
-        margin-right: 15px;
-    }
+.strike > span:before {
+  right: 100%;
+  margin-right: 15px;
+}
 
-    .strike > span:after {
-        left: 100%;
-        margin-left: 15px;
-    }
+.strike > span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.section-1{
+  text-shadow: lightgray 1px 1px;
+}
+
+.parallax { 
+/* The image used */
+  background-image: url("../img/parallax-1.jpg");
+
+  /* Set a specific height */
+  height: 50vh; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+svg {
+  width: 100%;
+  height: 10vw;
+  position: absolute;
+  z-index: 99;
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+
+.svg-1{
+  margin-top: -10%;
+}
