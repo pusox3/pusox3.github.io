@@ -56,7 +56,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url(../videos/test_vid.mp4) black no-repeat center center scroll;
+    background: url(../videos/main_video.mp4) black no-repeat center center scroll;
   }
   header video {
     display: none;
