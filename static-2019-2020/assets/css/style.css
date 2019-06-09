@@ -142,23 +142,23 @@ svg {
 }
 
 .svg-top{
-  margin-top: -10.1%;
+  margin-top: -10.05%;
 }
 
 .svg-blue-top{
-  filter: drop-shadow(0px -10px 7px lightblue);
+  filter: drop-shadow(0px -5px lightblue);
 }
 
 .svg-blue-bottom{
-  filter: drop-shadow(0px 10px 7px lightblue);
+  filter: drop-shadow(0px 5px lightblue);
 }
 
 .svg-red-top{
-  filter: drop-shadow(0px -10px 7px pink);
+  filter: drop-shadow(0px -5px pink);
 }
 
 .svg-red-bottom{
-  filter: drop-shadow(0px 10px 7px pink);
+  filter: drop-shadow(0px 5px pink);
 }
 
 /* ======================================================= */
