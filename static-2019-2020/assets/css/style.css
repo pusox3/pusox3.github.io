@@ -1,5 +1,8 @@
 /* ======================================================= */
 /* Additional Styles */
+/* Blue: #2980b9 */
+/* Red: #c0392b */
+/* Yellow: #fdcb6e */
 /* ======================================================= */
 
 .hidden {display:none;}
@@ -13,10 +16,41 @@
   font-weight:700;
 }
 
-.section-shadow{
-  text-shadow: lightgray 1px 1px;
+.my-shadow{
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
+section{
+  color: white;
+}
+
+.no-margin{
+  margin:0;
+}
+
+.section-blue{
+  background-color: #2980b9;
+}
+
+.section-red{
+  background-color: #c0392b;
+}
+
+.section-yellow{
+  background-color: #fdcb6e;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  margin:20px;
+}
+
+a{
+  color: white;
+}
 /* ======================================================= */
 /* Video Header Style */
 /* ======================================================= */
@@ -68,7 +102,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url(../videos/main_video.mp4) black no-repeat center center scroll;
+    background: url(../videos/main.mp4) black no-repeat center center scroll;
   }
   header video {
     display: none;
@@ -100,7 +134,7 @@ header .overlay {
   top: 50%;
   width: 9999px;
   height: 1px;
-  background: black;
+  background: white;
 }
 
 .strike > span:before {
@@ -142,26 +176,6 @@ svg {
 
 .svg-top{
   margin-top: -10.05%;
-}
-
-.svg-blue-top{
-  filter: drop-shadow(0px -5px lightblue);
-}
-
-.svg-blue-bottom{
-  filter: drop-shadow(0px 5px lightblue);
-}
-
-.svg-red-top{
-  filter: drop-shadow(0px -5px pink);
-}
-
-.svg-red-bottom{
-  filter: drop-shadow(0px 5px pink);
-}
-
-.svg-yellow-top{
-  filter: drop-shadow(0px -5px #ffff80);
 }
 
 /* ======================================================= */
