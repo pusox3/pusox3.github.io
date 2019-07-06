@@ -10,14 +10,18 @@ body{
 
 .hidden {display:none;}
 
+.navbar{
+  padding: 0;
+}
+
 .navbar-light .navbar-nav .nav-link{
   font-size: 1.5rem;
-  color: #000;
+  color: #fff;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
   text-decoration: underline;
-  color: #000;
+  color: #fff;
 }
 
 .display-1{
@@ -40,17 +44,19 @@ li{
   background-color:#d63031;
 }
 
+.bg-black{
+  background-color: black;
+}
+
 .mission-statement{
   font-size:1.5rem;
 }
 
 .pre-footer{
   height: 20vh;
-  background-color: black;
 }
 
 footer{
-  background-color: black;
   color: white;
 }
 
