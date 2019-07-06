@@ -1,7 +1,7 @@
-jQuery('html').addClass('hidden');
+jQuery('body').addClass('hidden');
 
 jQuery(document).ready(function ($) {
-	$('html').removeClass('hidden');
+	$('body').removeClass('hidden');
 	$('.carousel').carousel({
 		interval: 4000
 	})
