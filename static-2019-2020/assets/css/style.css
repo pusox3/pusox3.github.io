@@ -70,6 +70,26 @@ footer{
   height: 20vh;
 }
 
+.move-top{
+  position: absolute;
+  margin-top: -8%;
+  z-index: 100;
+}
+
+.my-container-fluid{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.rotate-left{
+  transform: rotate(-5deg);
+}
+
+.text-gray{
+  color: slategray;
+}
+
 /* ======================================================= */
 /* Video Header Style */
 /* ======================================================= */
@@ -83,8 +103,19 @@ footer{
   overflow: hidden;
 }
 
-.video-section{
-  height: 70vh;
+/* Tablets (portrait) */
+@media only screen and (max-device-width : 1024px) {
+  .video{
+    height: auto;
+  }
+
+  .move-top{
+    margin-top: -10%;
+  }
+
+  .display-1{
+    font-size: 3rem;
+  }
 }
 
 .video-logo{
@@ -92,13 +123,13 @@ footer{
   width: 40%;
 }
 
-header video {
+video {
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
