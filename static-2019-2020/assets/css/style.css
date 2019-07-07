@@ -86,6 +86,10 @@ footer{
   transform: rotate(-5deg);
 }
 
+.rotate-right{
+  transform: rotate(5deg);
+}
+
 .text-gray{
   color: slategray;
 }
