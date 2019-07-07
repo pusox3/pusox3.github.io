@@ -5,4 +5,7 @@ jQuery(document).ready(function ($) {
 	$('.carousel').carousel({
 		interval: 4000
 	})
+
+
+    new WOW().init();
 });  
