@@ -24,10 +24,6 @@ body{
   color: #fff;
 }
 
-.display-1{
-  font-weight:700;
-}
-
 section{
   color: #000;
 }
@@ -65,6 +61,15 @@ footer{
   width: 40%;
 }
 
+.header-shadow{
+  text-shadow: 4px 4px 1px black;
+  color: #eeeded;
+}
+
+.blank-content{
+  height: 20vh;
+}
+
 /* ======================================================= */
 /* Video Header Style */
 /* ======================================================= */
@@ -76,6 +81,10 @@ footer{
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
+}
+
+.video-section{
+  height: 70vh;
 }
 
 .video-logo{
