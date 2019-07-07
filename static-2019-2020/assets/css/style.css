@@ -17,11 +17,21 @@ body{
 .navbar-light .navbar-nav .nav-link{
   font-size: 1.5rem;
   color: #fff;
+
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 90%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #fff;
+
+  text-decoration: none;
+  background-size: 100% 3px;
 }
 
 section{
@@ -94,6 +104,22 @@ footer{
   color: slategray;
 }
 
+.display-contact{
+  font-size: 7rem;
+}
+
+.contact-link{
+  font-size: 2rem;
+}
+
+.contact-links a{
+  color: black;
+}
+
+.contact-links a:hover{
+  color: #343a40;
+}
+
 /* ======================================================= */
 /* Video Header Style */
 /* ======================================================= */
@@ -119,6 +145,18 @@ footer{
 
   .display-1{
     font-size: 3rem;
+  }
+
+  .display-contact{
+    font-size: 3rem;
+  }
+
+  .fa-2x{
+    font-size: 1rem !important;
+  }
+  
+  .contact-link{
+    font-size: 1rem;
   }
 }
 
