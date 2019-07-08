@@ -149,20 +149,28 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-6 mx-auto px-5" id="map">
+        <div class="col-md-6 mx-auto px-5 wow fadeInUpBig" id="map">
           <iframe width="100%" height="100%" frameborder="0" class="map-frame" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDnDpQ2l4jb8nYWjfQjXpwL9hJtTuh3Xmk
     &q=Stony+Brook+University,Stony+Brook,NY&zoom=8" allowfullscreen>
           </iframe>
+        </div>
+      </div>
+      <div class="row mt-5 wow fadeInUpBig">
+        <div class="col-md-6 mx-auto text-center">
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#weeklyModal">
+            Sign up for weekly newsletters!
+          </button>
+        </div>
+        <div class="col-md-6 mx-auto text-center">
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#monthlyModal">
+            Sign up for monthly alumni newsletters!
+          </button>
         </div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="container-fluid">
-      <div class="col-md-12 mx-auto text-left blank-content">
-      </div>
-    </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <polygon fill="#fff" points="100,0 100,100 0,0" />
     </svg>
@@ -184,6 +192,70 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal-Weekly -->
+  <div class="modal fade" id="weeklyModal" tabindex="-1" role="dialog" aria-labelledby="weeklyModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign up for weekly newsletters!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Simply enter your first name and email to start receiving PUSO's weekly newsletters!</p>
+          <form class="form-inline" role="form">
+            <div class="form-group px-2">
+              <label class="sr-only" for="subscribe-name">Your first name</label>
+              <input type="text" class="form-control" id="subscribe-name" placeholder="Your first name">
+            </div>
+            <div class="form-group px-2">
+              <label class="sr-only" for="subscribe-email">and your email</label>
+              <input type="email" class="form-control" id="subscribe-email" placeholder="and your email">
+            </div>
+            <input type="submit" class="btn btn-danger px-2" value="Subscribe!">
+          </form>
+          <hr>
+          <p><small>By providing your email you consent to receiving occasional emails &amp; newsletters.
+              <br>We respect your privacy &amp; you may unsubscribe at any time.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal-Monthly -->
+  <div class="modal fade" id="monthlyModal" tabindex="-1" role="dialog" aria-labelledby="monthlyModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign up for monthly alumni newsletters!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Simply enter your first name and email to start receiving PUSO's monthly alumni newsletters!</p>
+          <form class="form-inline" role="form">
+            <div class="form-group px-2">
+              <label class="sr-only" for="subscribe-name">Your first name</label>
+              <input type="text" class="form-control" id="subscribe-name" placeholder="Your first name">
+            </div>
+            <div class="form-group px-2">
+              <label class="sr-only" for="subscribe-email">and your email</label>
+              <input type="email" class="form-control" id="subscribe-email" placeholder="and your email">
+            </div>
+            <input type="submit" class="btn btn-danger px-2" value="Subscribe!">
+          </form>
+          <hr>
+          <p><small>By providing your email you consent to receiving occasional emails &amp; newsletters.
+              <br>We respect your privacy &amp; you may unsubscribe at any time.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

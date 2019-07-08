@@ -120,6 +120,26 @@ footer{
   color: #343a40;
 }
 
+.btn-light, .btn-light:hover{
+  border: 2px solid #343a40;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.btn-danger{
+  background-color: #d63031;
+}
+
+.modal-dialog{
+  max-width: 600px;
+}
+
+.form-control:focus {
+  border-color: #d63031 !important;
+  box-shadow: 0 0 5px rgb(250, 102, 102) !important;
+}
+
 /* ======================================================= */
 /* Video Header Style */
 /* ======================================================= */
