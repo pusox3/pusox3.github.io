@@ -1,4 +1,5 @@
 jQuery('body').addClass('hidden');
+const mq = window.matchMedia("(max-device-width : 1024px)");
 
 jQuery(document).ready(function ($) {
 	$('body').removeClass('hidden');
@@ -7,4 +8,11 @@ jQuery(document).ready(function ($) {
 	})
 
 	new WOW().init();
+
+	if(mq.matches){
+		$('.wow').each(function(){
+			$(this).attr('data-wow-delay', '0s');
+			// console.log($(this).attr('data-wow-delay'))
+		});
+	}
 });  
