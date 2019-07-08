@@ -6,6 +6,5 @@ jQuery(document).ready(function ($) {
 		interval: 4000
 	})
 
-
-    new WOW().init();
+	new WOW().init();
 });  
