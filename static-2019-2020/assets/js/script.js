@@ -12,7 +12,6 @@ jQuery(document).ready(function ($) {
 	if(mq.matches){
 		$('.wow').each(function(){
 			$(this).attr('data-wow-delay', '0s');
-			// console.log($(this).attr('data-wow-delay'))
 		});
 	}
 });  
