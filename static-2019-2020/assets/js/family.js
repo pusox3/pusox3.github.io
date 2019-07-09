@@ -10,7 +10,6 @@ var nodes = new vis.DataSet([
 
 /* Blue: #2980b9 */
 /* Red: #d63031 */
-
 // create an array with edges
 var edges = new vis.DataSet([
     { from: 1, to: 3, color: { color: '#2980b9', highlight: '#2980b9' } },
