@@ -78,7 +78,7 @@ var options = {
     },
     physics: {
         enabled: true,
-        timestep: 0.03,
+        timestep: 0.1,
         maxVelocity: 20,
         minVelocity: 0.2,
         hierarchicalRepulsion: {
