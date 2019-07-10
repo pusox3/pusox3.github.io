@@ -33,6 +33,7 @@ var edges = new vis.DataSet([
     { from: 11, to: 3, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 12, to: 3, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 13, to: 3, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 13, to: 7, color: { color: '#d63031', highlight: '#d63031' } },
 ]);
 
 // create a network
@@ -77,11 +78,12 @@ var options = {
     },
     physics: {
         enabled: true,
-        timestep: 0.2,
+        timestep: 0.03,
         maxVelocity: 20,
         minVelocity: 0.2,
         hierarchicalRepulsion: {
-            centralGravity: 0.0
+            centralGravity: 0.0,
+            damping: 0.05
         },
         solver: 'hierarchicalRepulsion'
     },
