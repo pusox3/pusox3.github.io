@@ -80,6 +80,11 @@ footer{
   height: 50px;
 }
 
+.invisible{
+  color: rgba(0,0,0,0);
+  text-shadow:none;
+}
+
 .move-top{
   position: absolute;
   margin-top: -8%;
