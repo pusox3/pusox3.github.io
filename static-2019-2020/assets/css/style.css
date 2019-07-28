@@ -145,6 +145,11 @@ footer{
   box-shadow: 0 0 5px rgb(250, 102, 102) !important;
 }
 
+.display-modified{
+  line-height: 1;
+  margin: 0;
+}
+
 /* ======================================================= */
 /* Video Header Style */
 /* ======================================================= */
@@ -321,4 +326,74 @@ svg {
   width: 600px;
   height: 400px;
   border: 1px solid lightgray;
+}
+
+/* ======================================================= */
+/* Eboard Cards */
+/* ======================================================= */
+
+.card{
+  box-shadow: black 0rem 0.75rem 1rem;
+}
+
+.card .rotation-1,
+.card .rotation-2 {
+  position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: inherit;								
+	z-index:-1;						
+	overflow:hidden;		
+	backface-visibility: hidden;			
+}
+  
+.card .rotation-1 {
+	z-index:-1;
+	transform: rotate(-14deg);
+}
+	
+.card .rotation-2 {
+  transform: rotate(14deg);
+}
+	
+.card .rotation-1:before,
+.card .rotation-2:before {
+	content: '';
+	position: absolute;
+	background: inherit;
+  top:0;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  background-repeat:no-repeat;
+	backface-visibility: hidden;				  
+}			
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin {100% {
+  -webkit-transform: rotate(360deg);
+  transform:rotate(360deg);
+}}
+
+.white-card{
+  background-color: white !important;
+  border: 6px solid black !important;
+  -webkit-animation: spin 7s linear infinite;
+  -moz-animation: spin 7s linear infinite;
+  animation: spin 7s linear infinite;
+}
+
+.black-card{
+  background-color: black !important;
+  border: 6px solid white !important;
+  -webkit-animation: spin 7s linear infinite;
+  -moz-animation: spin 7s linear infinite;
+  animation: spin 7s linear infinite;
+}
+
+.card-black-border{
+  border: 4px solid black;
 }

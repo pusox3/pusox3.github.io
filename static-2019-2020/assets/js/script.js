@@ -9,10 +9,10 @@ jQuery(document).ready(function ($) {
 
 	new WOW().init();
 
-	if(mq.matches){
-		$('.wow').each(function(){
+	if (mq.matches) {
+		$('.wow').each(function () {
 			$(this).attr('data-wow-delay', '0s');
 		});
 	}
-});  
+});
 
