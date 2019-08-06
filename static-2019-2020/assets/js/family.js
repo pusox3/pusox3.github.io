@@ -338,9 +338,12 @@ function find_individual(name){
     nodes.getDataSet().get().some(function(node){
         if(name.toLowerCase() == node.label.toLowerCase()){
             network.focus(node.id, {scale: 2});
-            // also have it so that the node is clicked
-            // bootstrap button - on click or on search
             return true;
         }
     })
+}
+
+function searchWeb(){
+    var name = $('#web-text-input').val();
+    find_individual(name);
 }
