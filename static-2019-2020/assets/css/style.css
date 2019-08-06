@@ -85,6 +85,12 @@ footer{
   text-shadow:none;
 }
 
+.move-top-change{
+  position: absolute;
+  margin-top: -8%;
+  z-index: 100;
+}
+
 .move-top{
   position: absolute;
   margin-top: -8%;
@@ -167,6 +173,10 @@ footer{
 @media only screen and (max-device-width : 1024px) {
   .video{
     height: auto;
+  }
+
+  .move-top-change{
+    position: relative;
   }
 
   .move-top{
