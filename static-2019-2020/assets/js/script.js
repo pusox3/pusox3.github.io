@@ -3,8 +3,7 @@ const mq = window.matchMedia("(max-device-width : 1024px)");
 
 jQuery(document).ready(function ($) {
 	$('body').removeClass('hidden');
-	$('#myCarousel1').carousel();
-	$('#myCarousel2').carousel();
+	$('.carousel').carousel();
 
 
 	new WOW().init();
