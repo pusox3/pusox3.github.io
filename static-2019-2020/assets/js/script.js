@@ -3,9 +3,10 @@ const mq = window.matchMedia("(max-device-width : 1024px)");
 
 jQuery(document).ready(function ($) {
 	$('body').removeClass('hidden');
-	$('.carousel').carousel({
-		interval: 4000
-	})
+	$('#myCarousel1, #myCarousel2').carousel({
+		interval: 3000
+	});
+
 
 	new WOW().init();
 
