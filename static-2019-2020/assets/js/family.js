@@ -20,7 +20,7 @@ var nodes = new vis.DataSet([
     {id: 19, label: 'Angelica Celis'},
     {id: 20, label: 'Jennifer Celebrado'},
     {id: 21, label: 'Laura Vega'},
-    {id: 22, label: 'Kyna Reyez'},
+    {id: 22, label: 'Kyna Reyes'},
     {id: 23, label: 'Muhammad Rivaldo'},
     {id: 24, label: 'Amanda Tran'},
     {id: 25, label: 'Edward Rozario'},
@@ -333,15 +333,6 @@ var options = {
 } 
 
 var network = new vis.Network(container, data, options);
-
-// const network = new vis.Network(container, data, options);
-// setTimeout(()=>{
-//     network.setOptions({
-//         layout:{
-//             hierarchical: false
-//         },
-//     });
-// },1000);
 
 function find_individual(name){
     nodes.getDataSet().get().some(function(node){
