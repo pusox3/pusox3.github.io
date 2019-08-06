@@ -323,8 +323,8 @@ svg {
 /* Network Style */
 /* ======================================================= */
 #mynetwork {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 75vh;
   border: 1px solid lightgray;
 }
 

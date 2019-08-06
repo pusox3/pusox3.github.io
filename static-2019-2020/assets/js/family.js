@@ -293,6 +293,7 @@ var data = {
     nodes: nodes,
     edges: edges
 };
+
 var options = {
     autoResize: true,
     height: '100%',
@@ -327,33 +328,9 @@ var options = {
     },
     physics: {
         enabled: true,
-        timestep: 0.1,
-        maxVelocity: 20,
-        minVelocity: 0.2,
-        hierarchicalRepulsion: {
-            centralGravity: 0.0,
-            damping: 0.05,
-            nodeDistance: 200,
-            springLength: 175,
-            springConstant: 0.05
-        },
-        solver: 'hierarchicalRepulsion'
-    },
-    layout: {
-        hierarchical: {
-            enabled: true,
-            direction: 'DU',
-            sortMethod: 'directed',
-            treeSpacing: 50,
-            nodeSpacing: 125,
-            parentCentralization: false,
-        }
-    },
-    configure:{
-        enabled: true,
-        showBUtton: true
+        solver: 'forceAtlas2Based'
     }
-}
+} 
 
 var network = new vis.Network(container, data, options);
 
