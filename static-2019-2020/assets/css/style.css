@@ -309,17 +309,6 @@ svg {
 }
 
 /* ======================================================= */
-/* Executive Board Page Style */
-/* ======================================================= */
-.executive-board{
-  color: black;
-  height: auto;
-  background-color: #ff2a2a;
-  background-image: linear-gradient(0deg, #ff2a2a 0%, #2c8ee6 100%);
-  /* background-image: url('../img/stonybrook.jpg'); */
-}
-
-/* ======================================================= */
 /* Network Style */
 /* ======================================================= */
 #mynetwork {
