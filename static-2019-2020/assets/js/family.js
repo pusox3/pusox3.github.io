@@ -343,7 +343,7 @@ function find_individual(name){
     })
 }
 
-function searchWeb(){
+$('#web-search').click(function(){
     var name = $('#web-text-input').val();
     find_individual(name);
-}
+});
