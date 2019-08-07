@@ -97,22 +97,33 @@
     <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <polygon fill="#fff" points="0,100 0,0 50,100, 100,0 100,100" />
     </svg>
-    <div class="container-fluid">
-      <div class="col-md-12 mx-auto text-left">
-        <h3 class="pb-4 text-uppercase wow slideInLeft">Who We Are</h3>
-        <p class="lead wow slideInLeft">Established in 1994, the Philippine United Student Organization (PUSO) is a
-          Filipino
-          cultural-interest
-          organization at Stony Brook University. We
-          consist of three dance teams, PUSO Cultural, PUSO Ballroom and PUSO Modern, that perform and compete at
-          events
-          both on and off campus year round.</p>
-        <p class="lead wow slideInLeft">We fulfill our mission statement by hosting events such as an Ate/Kuya mentoring
-          program, Sayaw; Stony Brook’s largest
-          dance competition, and PUSOfest; a showcase of our general body members and a celebration of the year’s
-          accomplishments.</p>
-        <p class="lead wow slideInLeft">
-          Anyone is welcome to join! General Body Meetings are in Melville Library E4320 on Mondays from 8PM - 9 PM</p>
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-md-6 mx-auto pos-relative text-center">
+          <button type="button" class="btn btn-event" data-toggle="modal" data-target="#halohalloweenModal">
+            <img src="assets/img/events/halohalloween1.jpg" class="img-fluid">
+            <h1 class="caption header-shadow text-uppercase">Halo-Halloween</h1>
+          </button>
+        </div>
+        <div class="col-md-6 mx-auto pos-relative text-center">
+          <img src="assets/img/events/kultura5.jpg" class="img-fluid">
+          <h1 class="caption header-shadow text-uppercase">Kultura</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mx-auto text-center">
+          <h1 class="header-shadow display-1 text-uppercase wow zoomIn">Fall Events</h1>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-md-6 mx-auto pos-relative text-center">
+          <img src="assets/img/events/halohalloween1.jpg" class="img-fluid">
+          <h1 class="caption header-shadow text-uppercase">Kamayan Night</h1>
+        </div>
+        <div class="col-md-6 mx-auto pos-relative text-center">
+          <img src="assets/img/events/halohalloween1.jpg" class="img-fluid">
+          <h1 class="caption header-shadow text-uppercase">Simbang Gabi</h1>
+        </div>
       </div>
     </div>
 
@@ -120,6 +131,50 @@
       <polygon fill="#fff" points="0 100,50 50,100 100,100 0,0 0" />
     </svg>
   </section>
+
+   <!-- Modal Halo Halloween -->
+  <div class="modal fade" id="halohalloweenModal" tabindex="-1" role="dialog" aria-labelledby="monthlyModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign up for monthly alumni newsletters!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Simply enter your full name and email to start receiving PUSO's monthly alumni newsletters!</p>
+          <form class="form-inline" role="form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdQxxcbbsOv79dJh3xE8G_4S3okBfq6lHqQT0y213_GGpcycQ/formResponse"
+            method="post" target="_blank">
+            <div class="form-row py-2">
+              <div class="form-group px-2">
+                <label class="sr-only" for="subscribe-name">First Name</label>
+                <input name="entry.469881522" type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="form-group px-2">
+                <label class="sr-only" for="subscribe-name">Last Name</label>
+                <input name="entry.1424881804" type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+            <div class="form-row py-2">
+              <div class="form-group px-2">
+                <label class="sr-only" for="subscribe-email">Email</label>
+                <input name="entry.1489609229" type="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group px-2">
+                <input type="submit" class="btn btn-danger" value="Subscribe!">
+              </div>
+            </div>
+          </form>
+          <hr>
+          <p><small>By providing your email you consent to receiving occasional emails &amp; newsletters.
+              <br>We respect your privacy &amp; you may unsubscribe at any time.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section>
     <div class="parallax" style="background-image: url('assets/img/events/events2.png')">
@@ -129,7 +184,7 @@
   <section>
     <div class="container-fluid mt-5 mb-5">
       <div class="text-center col-md-12 move-top-change">
-        <h1 class="pb-4 header-shadow display-1 text-uppercase wow slideInLeft">Weekly General Body Meetings</h1>
+        <h1 class="pb-4 header-shadow display-1 text-uppercase">Weekly General Body Meetings</h1>
       </div>
       <div class="col-md-8 mx-auto text-center text-uppercase">
         <div id="gbm-carousel" class="carousel slide" data-ride="carousel">
@@ -179,7 +234,7 @@
         </div>
       </div>
       <div class="text-center col-md-12 move-bottom-change">
-        <h1 class="pb-4 header-shadow display-1 text-uppercase wow slideInLeft">Mondays &#64; 8PM Melville E4320</h1>
+        <h1 class="pb-4 header-shadow display-1 text-uppercase">Mondays &#64; 8PM Melville E4320</h1>
       </div>
     </div>
   </section>
@@ -193,22 +248,27 @@
     <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <polygon fill="#fff" points="0,100 0,0 50,100, 100,0 100,100" />
     </svg>
-    <div class="container-fluid">
-      <div class="col-md-12 mx-auto text-left">
-        <h3 class="pb-4 text-uppercase wow slideInLeft">Who We Are</h3>
-        <p class="lead wow slideInLeft">Established in 1994, the Philippine United Student Organization (PUSO) is a
-          Filipino
-          cultural-interest
-          organization at Stony Brook University. We
-          consist of three dance teams, PUSO Cultural, PUSO Ballroom and PUSO Modern, that perform and compete at
-          events
-          both on and off campus year round.</p>
-        <p class="lead wow slideInLeft">We fulfill our mission statement by hosting events such as an Ate/Kuya mentoring
-          program, Sayaw; Stony Brook’s largest
-          dance competition, and PUSOfest; a showcase of our general body members and a celebration of the year’s
-          accomplishments.</p>
-        <p class="lead wow slideInLeft">
-          Anyone is welcome to join! General Body Meetings are in Melville Library E4320 on Mondays from 8PM - 9 PM</p>
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-md-6 mx-auto">
+          <img src="assets/img/events/eboard1.jpg" class="img-fluid">
+        </div>
+        <div class="col-md-6 mx-auto">
+          <img src="assets/img/events/eboard1.jpg" class="img-fluid">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mx-auto text-center">
+          <h1 class="header-shadow display-1 text-uppercase wow zoomIn">Spring Events</h1>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-md-6 mx-auto">
+          <img src="assets/img/events/eboard1.jpg" class="img-fluid">
+        </div>
+        <div class="col-md-6 mx-auto">
+          <img src="assets/img/events/eboard1.jpg" class="img-fluid">
+        </div>
       </div>
     </div>
 
