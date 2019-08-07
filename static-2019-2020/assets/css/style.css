@@ -460,3 +460,10 @@ svg {
 .modal-xl .modal-header{
   border: none;
 }
+
+.modal-sayaw{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
