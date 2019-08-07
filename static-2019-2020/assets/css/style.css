@@ -223,7 +223,13 @@ footer{
   .contact-link{
     font-size: 1rem;
   }
+
+  .modal-xl svg{
+    display: none;
+  }
+
 }
+
 
 .video-logo{
   min-width: 300px;
@@ -432,4 +438,31 @@ svg {
 
 #mynetwork{
   border: 3px solid #343a40;
+}
+
+/* ======================================================= */
+/* Event Modal Styles */
+/* ======================================================= */
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}
+
+.modal-xl .modal-body{
+    padding: 0;
+  }
+
+.modal-xl .svg-top{
+  margin-top: -6.3%;
+}
+
+.modal-xl svg{
+  height: 10vh;
+}
+
+.modal-xl .modal-header{
+  border: none;
 }
