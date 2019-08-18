@@ -1,4 +1,4 @@
-var nodes = new vis.DataSet([
+var nodeSet = [
     {id: 1, label: 'Yee-Ting Tso'},
     {id: 2, label: 'Christine Tomas'},
     {id: 3, label: 'Danielle Magnaye'},
@@ -133,14 +133,13 @@ var nodes = new vis.DataSet([
     {id: 132, label: 'Viviene De Guzman'},
     {id: 133, label: 'Jazmin-Jean Fuertes'},
     {id: 134, label: 'Nikita Patel'}
-]);
+];
 
 /* Edge to an ate: { from: [person-id], to: [ate-id], color: { color: '#d63031', highlight: '#d63031' } } */
 /* Edge to a kuya: { from: [person-id], to: [kuya-id], color: { color: '#2980b9', highlight: '#2980b9' } }, */
 /* Blue: #2980b9 */
 /* Red: #d63031 */
-// create an array with edges
-var edges = new vis.DataSet([
+var edgeSet = [
     { from: 2, to: 1, color: { color: '#d63031', highlight: '#d63031' } },
     { from: 3, to: 2, color: { color: '#d63031', highlight: '#d63031' } },
     { from: 4, to: 3, color: { color: '#d63031', highlight: '#d63031' } },
@@ -188,8 +187,8 @@ var edges = new vis.DataSet([
     { from: 31, to: 120, color: { color: '#d63031', highlight: '#d63031' } },
     { from: 31, to: 30, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 32, to: 114, color: { color: '#d63031', highlight: '#d63031' } },
-    { from: 33, to: 37, color: { color: '#d63031', highlight: '#d63031' } },
-    { from: 33, to: 114, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 33, to: 114, color: { color: '#d63031', highlight: '#d63031' } },
+    { from: 33, to: 37, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 34, to: 33, color: { color: '#d63031', highlight: '#d63031' } },
     { from: 35, to: 33, color: { color: '#d63031', highlight: '#d63031' } },
     { from: 36, to: 35, color: { color: '#2980b9', highlight: '#2980b9' } },
@@ -283,11 +282,12 @@ var edges = new vis.DataSet([
     { from: 107, to: 130, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 108, to: 107, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 109, to: 107, color: { color: '#2980b9', highlight: '#2980b9' } }
-]);
-
+];
 // create a network
 var container = document.getElementById('mynetwork');
 
+var nodes = new vis.DataSet(nodeSet);
+var edges = new vis.DataSet(edgeSet);
 // provide the data in the vis format
 var data = {
     nodes: nodes,
