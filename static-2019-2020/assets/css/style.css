@@ -467,3 +467,10 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* ======================================================= */
+/* Google Calendar Styles */
+/* ======================================================= */
+#warningBox{
+  display:none;
+}
