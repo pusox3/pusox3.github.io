@@ -421,7 +421,11 @@ svg {
 }
 
 .card-black-border{
-  border: 4px solid black;
+  border: 6px solid black;
+}
+
+.card-white-border{
+  border: 6px solid white;
 }
 
 /* ======================================================= */
