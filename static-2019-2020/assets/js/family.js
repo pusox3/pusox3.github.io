@@ -142,7 +142,7 @@ var nodeSet = [
     { id: 141, label: 'David Motel' },
     { id: 142, label: 'Andrew Chow' },
     { id: 143, label: 'Isaac Zhan' },
-    { id: 144, label: 'Isaac Zhan' },
+    { id: 144, label: 'Jonathan Cheng' },
     { id: 145, label: 'Joel Cohen' },
     { id: 146, label: 'Karina Martinez' },
     { id: 147, label: 'Jonathan Nunes' },
@@ -214,7 +214,14 @@ var nodeSet = [
     { id: 213, label: 'Angie Song' },
     { id: 214, label: 'Calvin Ng' },
     { id: 215, label: 'Jan Cecil Aborde' },
-    { id: 216, label: 'Brandon Kim' }
+    { id: 216, label: 'Brandon Kim' },
+    { id: 217, label: 'Lily Liu' },
+    { id: 218, label: 'Gilbert Chen' },
+    { id: 219, label: 'Ethan Foreman' },
+    { id: 220, label: 'Keena Wong' },
+    { id: 221, label: 'Varun Goyal' },
+    { id: 222, label: 'Shannon Tian' },
+    { id: 223, label: 'Kunwar Sharma' }
 ];
 
 /* Edge to an ate: { from: [person-id], to: [ate-id], color: { color: '#d63031', highlight: '#d63031' } } */
@@ -421,7 +428,15 @@ var edgeSet = [
     { from: 198, to: 199, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 10, to: 207, color: { color: '#2980b9', highlight: '#2980b9' } },
     { from: 107, to: 211, color: { color: '#2980b9', highlight: '#2980b9' } },
-    { from: 213, to: 214, color: { color: '#2980b9', highlight: '#2980b9' } }
+    { from: 213, to: 214, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 219, to: 50, color: { color: '#d63031', highlight: '#d63031' } },
+    { from: 220, to: 111, color: { color: '#d63031', highlight: '#d63031' } },
+    { from: 217, to: 218, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 221, to: 196, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 111, to: 221, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 222, to: 221, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 23, to: 221, color: { color: '#2980b9', highlight: '#2980b9' } },
+    { from: 223, to: 221, color: { color: '#2980b9', highlight: '#2980b9' } }
 ];
 // create a network
 var container = document.getElementById('mynetwork');
