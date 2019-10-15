@@ -171,7 +171,7 @@ var genbod = [
     'Stephanie Yuvienco',
     'Kristina London',
     'Vincent Goco',
-    'Sam Cadorniga',
+    'Samantha Cadorniga',
     'John Kim',
     'Alyssa Mirasol',
     'Chrisdelon Bonjoc',
@@ -242,6 +242,14 @@ var genbod = [
     'Stephanie Flanagan',
     'Vanessa Agulo',
     'Pragati Chaudhary',
+    'Justin Armamento Martinez',
+    'Dexie Capistrano Go',
+    'Patrick Widner Lafontant',
+    'Kevin Luzong',
+    'Richie Hong',
+    'Gabe Purugganan',
+    'Chris Lem',
+    'Raina Wong'
 ]
 
 var nodeSet = [];
@@ -431,7 +439,7 @@ var edgeSet = [
     (ateEdge('Genesis Taveras','Shanice Williams')),
     (ateEdge('Jennifer Celebrados','Sophia Liang')),
     (ateEdge('Kristina London','Stephanie Yuvienco')),
-    (ateEdge('Sam Cadorniga','Vincent Goco')),
+    (ateEdge('Samantha Cadorniga','Vincent Goco')),
     (ateEdge('Alyssa Mirasol','John Kim')),
     (kuyaEdge('Chrisdelon Bonjoc','John Kim')),
     (ateEdge('Alyssa Mirasol','Tim Zhu')),
@@ -509,6 +517,21 @@ var edgeSet = [
     (ateEdge('Yee-Ting Tso','Perry Tang')),
     (ateEdge('Vanessa Agulo','Nicole Scala')),
     (ateEdge('Christine Sicwaten','Vanessa Agulo')),
+    (ateEdge('Claudia Chang','Joey Leung')),
+    (ateEdge('Claudia Chang','Wenya Truong')),
+    (ateEdge('Dexie Capistrano Go','Justin Armamento Martinez')),
+    (kuyaEdge('Patrick Widner Lafontant','Justin Armamento Martinez')),
+    (kuyaEdge('Justin Armamento Martinez','Samantha Cadorniga')),
+    (kuyaEdge('Kevin Luzong','Andrew Solis')),
+    (kuyaEdge('Richie Hong','Kaitlyn Espiritu')),
+    (kuyaEdge('Richie Hong','Gabe Purugganan')),
+    (kuyaEdge('Richie Hong','Kenneth Collado')),
+    (ateEdge('Deza Lerasan','Eyron Cato')),
+    (kuyaEdge('Richard Wang','Stephanie Yuvienco')),
+    (ateEdge('Stephanie Yuvienco','Raina Wong')),
+    (ateEdge('Stephanie Yuvienco','Darius Kwak')),
+    (kuyaEdge('Chris Lem','Anthony Huang')),
+    (ateEdge('Diana Wu Li','Tiffany Chu')),
     /** 
      * PUT THE NEW EDGES HERE
      * 
