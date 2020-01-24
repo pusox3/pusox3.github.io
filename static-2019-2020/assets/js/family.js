@@ -258,6 +258,7 @@ var genbod = [
     'Chris Lem',
     'Raina Wong',
     'Helen Jiang',
+    'Dazil Aquino',
     /**
      * ================================================
      * Kamayan Night 2019 
@@ -423,6 +424,7 @@ var edgeSet = [
     (kuyaEdge('Carlo Antonio','Jasmine Quindala')),
     (ateEdge('Jasmine Quindala','Jenna Santiago')),
     (ateEdge('Jasmine Quindala','Avan Phan')),
+    (kuyaEdge('Adrian Laus', 'Avan Phan')),
     (kuyaEdge('Avan Phan','David Tsoi')),
     (kuyaEdge('Perry Tang','Carlo Antonio')),
     (kuyaEdge('Carlo Antonio','Adam Soo')),
@@ -624,6 +626,7 @@ var edgeSet = [
     (ateEdge('Stephanie Yuvienco','Darius Kwak')),
     (kuyaEdge('Chris Lem','Anthony Huang')),
     (ateEdge('Diana Wu Li','Tiffany Chu')),
+    (kuyaEdge('Dazil Aquino', 'Michelle Duong')),
     /**
      * ================================================
      * Kamayan Night 2019 
