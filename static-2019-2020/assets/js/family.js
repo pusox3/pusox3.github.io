@@ -4,7 +4,9 @@ const [nodes, edges] = [new vis.DataSet(), new vis.DataSet()];
 
 // read from data.csv and create the nodes/edges
 $.ajax({
-    url: 'data.csv',
+    type: 'GET',
+    url: 'data.txt',
+    datatype: 'text',
     success: (data) => {
         const objects = csv.toObjects(data);
         objects.forEach((entry, i) => {
