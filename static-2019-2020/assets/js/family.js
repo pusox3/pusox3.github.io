@@ -1,71 +1,8 @@
-// modify the hex values to change the colors
-const [red, blue, yellow] = ["#d63031", "#2980b9", "#fdcb6e"];
-const [nodes, edges] = [new vis.DataSet(), new vis.DataSet()];
+'use strict';
 
-// read from data.csv and create the nodes/edges
-$.ajax({
-    type: 'GET',
-    url: 'data.txt',
-    datatype: 'text',
-    success: (data) => {
-        const objects = csv.toObjects(data);
-        objects.forEach((entry, i) => {
-            let { "Name": label, "Ate Row": ate_id, "Kuya Row": kuya_id } = entry;
-            const id = i + 2; // add 2 to account for header and 0 index start of iterator i
+const [red, blue] = ["#d63031", "#2980b9"];
 
-            nodes.add({ id: id, label: label });
-            if (ate_id !== "") {
-                ate_id = Number(ate_id)
-                edges.add(
-                    {
-                        from: id,
-                        to: ate_id,
-                        color: { color: red, highlight: red },
-                        relation: "ate",
-                    }
-                );
-                edges.add(
-                    {
-                        from: ate_id,
-                        to: id,
-                        color: { color: yellow, highlight: yellow },
-                        relation: "ading",
-                    }
-                )
-            }
-            if (kuya_id !== "") {
-                kuya_id = Number(kuya_id)
-                edges.add(
-                    {
-                        from: id,
-                        to: kuya_id,
-                        color: { color: blue, highlight: blue },
-                        relation: "kuya",
-                    }
-                );
-                edges.add(
-                    {
-                        from: kuya_id,
-                        to: id,
-                        color: { color: yellow, highlight: yellow },
-                        relation: "ading",
-                    }
-                )
-            }
-        });
-    }
-});
-
-// create a network
-var container = document.getElementById('mynetwork');
-
-// provide the data in the vis format
-var data = {
-    nodes: nodes,
-    edges: edges
-};
-
-var options = {
+const options = {
     autoResize: true,
     height: '100%',
     width: '100%',
@@ -102,40 +39,191 @@ var options = {
     },
     physics: {
         enabled: true,
-        solver: 'forceAtlas2Based'
+        solver: 'forceAtlas2Based',
     }
 }
 
-var network = new vis.Network(container, data, options);
+const e = React.createElement;
 
-network.on("stabilizationProgress", function (params) {
-    var maxWidth = container.clientWidth;
-    var minWidth = 20;
-    var widthFactor = params.iterations / params.total;
-    var width = Math.max(minWidth, maxWidth * widthFactor);
-    document.getElementById('bar').style.width = width + 'px';
-    document.getElementById('text').innerHTML = Math.round(widthFactor * 100) + '%';
-});
+class FamilyWebApp extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            searchValue: "",
+            displayedNodes: new Set(),
+            filterShown: false,
+        };
+        this.nodes = new vis.DataSet();
+        this.edges = new vis.DataSet();
+        this.nodesView = new vis.DataView(this.nodes, { filter: this.nodesFilter });
+        this.network = {};
+        this.appRef = React.createRef();
+    }
 
-network.once("stabilizationIterationsDone", function () {
-    document.getElementById('text').innerHTML = '100%';
-    document.getElementById('loadingBar').style.opacity = 0;
-    document.getElementById('bar').style.width = container.clientWidth;
-    setTimeout(function () {
-        document.getElementById('loadingBar').style.display = 'none';
-    }, 500);
-});
+    initializeNetworkData = (data) => {
+        const objects = $.csv.toObjects(data);
+        objects.forEach((entry, i) => {
+            let { "Name": label, "Ate Row": ate_id, "Kuya Row": kuya_id } = entry;
+            const id = i + 2; // add 2 to account for header and 0 index start of iterator i
 
-function find_individual(name) {
-    nodes.getDataSet().get().some(function (node) {
-        if (name.toLowerCase() == node.label.toLowerCase()) {
-            network.focus(node.id, { scale: 2 });
-            return true;
+            this.nodes.add({ id: id, label: label });
+            if (ate_id !== "") {
+                ate_id = Number(ate_id)
+                this.edges.add(
+                    {
+                        from: id,
+                        to: ate_id,
+                        color: { color: red, highlight: red },
+                        relation: "ate",
+                    }
+                );
+            }
+            if (kuya_id !== "") {
+                kuya_id = Number(kuya_id)
+                this.edges.add(
+                    {
+                        from: id,
+                        to: kuya_id,
+                        color: { color: blue, highlight: blue },
+                        relation: "kuya",
+                    }
+                );
+            }
+        });
+    }
+
+    componentDidMount() {
+        // read from ate-kuya-data.csv and create the network
+        $.ajax({
+            type: 'GET',
+            url: 'ate-kuya-data.csv',
+            // url: 'https://pusox3.github.io/static-2019-2020/ate-kuya-data.csv',
+            datatype: 'text',
+            success: (data) => {
+                this.initializeNetworkData(data);
+                this.network = new vis.Network(this.appRef.current, {
+                    nodes: this.nodesView,
+                    edges: this.edges,
+                }, options);
+                this.network.on("stabilizationProgress", this.stabilizationProgress);
+                this.network.once("stabilizationIterationsDone", this.stabilizationDone);
+            }
+        });
+    }
+
+    stabilizationProgress = (params) => {
+        let maxWidth = this.appRef.current.clientWidth;
+        let minWidth = 20;
+        let widthFactor = params.iterations / params.total;
+        let width = Math.max(minWidth, maxWidth * widthFactor);
+        document.getElementById('bar').style.width = width + 'px';
+        document.getElementById('text').innerHTML = Math.round(widthFactor * 100) + '%';
+    }
+
+    stabilizationDone = () => {
+        document.getElementById('text').innerHTML = '100%';
+        document.getElementById('loadingBar').style.opacity = 0;
+        document.getElementById('bar').style.width = this.appRef.current.clientWidth;
+        setTimeout(function () {
+            document.getElementById('loadingBar').style.display = 'none';
+        }, 500);
+    }
+
+    nodesFilter = (node) => {
+        return !this.state.filterShown || this.state.displayedNodes.has(node.id);
+    }
+
+    getSearchedNode = () => {
+        return this.nodes.get({
+            filter: (node) => node.label.toLowerCase() === this.state.searchValue.toLowerCase()
+        })[0];
+    }
+
+    showSuccessors = () => {
+        this.reset(null, () => {
+            const searchedNode = this.getSearchedNode();
+            let nodesToDisplay;
+            if (searchedNode !== undefined) {
+                nodesToDisplay = this.getConnected(searchedNode.id, "from");
+            } else {
+                nodesToDisplay = new Set();
+            }
+            this.setState({ displayedNodes: nodesToDisplay, filterShown: true }, () => {
+                this.nodesView.refresh();
+            });
+        });
+    }
+
+    showPredecessors = () => {
+        this.reset(null, () => {
+            const searchedNode = this.getSearchedNode();
+            let nodesToDisplay;
+            if (searchedNode !== undefined) {
+                nodesToDisplay = this.getConnected(searchedNode.id, "to");
+            } else {
+                nodesToDisplay = new Set();
+            }
+            this.setState({ displayedNodes: nodesToDisplay, filterShown: true }, () => {
+                this.nodesView.refresh();
+            });
+        });
+    }
+
+    getConnected = (node, direction = "any") => {
+        const successors = new Set();
+        let queue = [];
+        queue.push(node);
+
+        while (queue.length !== 0) {
+            let level_size = queue.length;
+            for (let i = 0; i < level_size; i++) {
+                let temp = queue.shift();
+                successors.add(temp);
+                this.network.getConnectedNodes(temp, direction).forEach((item) => {
+                    if (!successors.has(item)) {
+                        queue.push(item);
+                    }
+                });
+            }
         }
-    })
+        return successors;
+    }
+
+    reset = (e, callback = null) => {
+        this.setState({ filterShown: false }, () => {
+            this.nodesView.refresh();
+            if (callback !== null) {
+                callback();
+            }
+        })
+    }
+
+    handleSearchChange = (e) => {
+        this.setState({ searchValue: e.target.value })
+    }
+
+    render() {
+        return e("div", null, e("input", {
+            type: "text",
+            placeholder: "Search Web",
+            "aria-label": "Search Web",
+            value: this.state.searchValue,
+            onChange: this.handleSearchChange
+        }), e("button", {
+            type: "button",
+            onClick: this.reset
+        }, "Reset"), e("button", {
+            type: "button",
+            onClick: this.showSuccessors
+        }, "Show Successors"), e("button", {
+            type: "button",
+            onClick: this.showPredecessors
+        }, "Show Predecessors"), e("div", {
+            ref: this.appRef,
+            id: "mynetwork",
+        }));
+    }
 }
 
-$('#web-search').click(function () {
-    var name = $('#web-text-input').val();
-    find_individual(name);
-});
+const familyWebAppContainer = document.querySelector('#family_web_app_container');
+ReactDOM.render(e(FamilyWebApp), familyWebAppContainer);
