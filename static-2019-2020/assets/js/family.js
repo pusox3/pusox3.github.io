@@ -63,8 +63,8 @@ class FamilyWebApp extends React.Component {
     initializeNetworkData = (data) => {
         const objects = $.csv.toObjects(data);
         objects.forEach((entry, i) => {
-            let { "Name": label, "Ate Row": ate_id, "Kuya Row": kuya_id } = entry;
-            const id = i + 2; // add 2 to account for header and 0 index start of iterator i
+            let { "Name": label, "Id": id, "Ate Id": ate_id, "Kuya Id": kuya_id } = entry;
+            id = Number(id);
 
             this.nodes.add({ id: id, label: label });
             if (ate_id !== "") {
