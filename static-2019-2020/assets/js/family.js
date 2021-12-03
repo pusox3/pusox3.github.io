@@ -142,13 +142,23 @@ class SettingsModal extends React.Component {
                 ),
                 e(
                   "div",
-                  { class: "my-1 form-group" },
+                  {
+                    class: "input-group",
+                    hidden: this.props.predecessorCheckboxValue,
+                  },
+                  e(
+                    "div",
+                    { class: "input-group-prepend" },
+                    e(
+                      "span",
+                      { class: "input-group-text" },
+                      "Max predecessor levels"
+                    )
+                  ),
                   e("input", {
                     class: "form-control",
                     type: "number",
-                    placeholder: "Max number of predecessor levels",
                     id: "num_predecessor_levels",
-                    hidden: this.props.predecessorCheckboxValue,
                     value: this.props.numPredecessorLevels,
                     onChange: this.props.handleNumPredecessorLevels,
                   })
@@ -180,13 +190,23 @@ class SettingsModal extends React.Component {
                 ),
                 e(
                   "div",
-                  { class: "my-1 form-group" },
+                  {
+                    class: "input-group",
+                    hidden: this.props.successorCheckboxValue,
+                  },
+                  e(
+                    "div",
+                    { class: "input-group-prepend" },
+                    e(
+                      "span",
+                      { class: "input-group-text" },
+                      "Max successor levels"
+                    )
+                  ),
                   e("input", {
                     class: "form-control",
                     type: "number",
-                    placeholder: "Max number of successor levels",
                     id: "num_successor_levels",
-                    hidden: this.props.successorCheckboxValue,
                     value: this.props.numSuccessorLevels,
                     onChange: this.props.handleNumSuccessorLevels,
                   })
@@ -253,7 +273,7 @@ class FamilyWebApp extends React.Component {
     $.ajax({
       type: "GET",
       url: "ate-kuya-data.csv",
-      //   url: "https://pusox3.github.io/static-2019-2020/ate-kuya-data.csv",
+      // url: "https://pusox3.github.io/static-2019-2020/ate-kuya-data.csv",
       datatype: "text",
       success: (data) => {
         this.initializeNetworkData(data);
